@@ -35,11 +35,11 @@
             }
 	    nvim-ts-autotag
             {
-                plugin = nvim-comment;
+                plugin = comment-nvim;
                 config = toLua "require(\"Comment\").setup()";
             }
             {
-                plugin = vim-surround;
+                plugin = nvim-surround;
                 config = toLua "require(\"nvim-surround\").setup()";
             }
             {
@@ -94,13 +94,18 @@
 
             }
             {
+                plugin = cmake-tools-nvim;
+                config = toLuaFile ./lua/cmake-tools.lua;
+            }
+            {
                 plugin = nvim-dap;
                 config = toLuaFile ./lua/dap.lua;
             }
             {
-                plugin = cmake-tools-nvim;
-                config = toLuaFile ./lua/cmake-tools.lua;
+                plugin = nvim-dap-ui;
+                config = toLuaFile ./lua/dap-ui.lua;
             }
+	    
 
         ] ++ treesitter-parsers;
 
