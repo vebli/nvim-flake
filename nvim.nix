@@ -58,7 +58,7 @@
                 plugin = nvim-treesitter-textobjects;
                 config = toLuaFile ./lua/treesitter-textobjects.lua;
             }
-
+            nvim-treesitter.withAllGrammars
             oxocarbon-nvim
             dracula-nvim
             nvim-lspconfig
