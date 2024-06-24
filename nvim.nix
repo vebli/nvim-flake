@@ -30,7 +30,7 @@
         plugins = with pkgs.vimPlugins; [
 
             {
-                plugin = auto-pairs;
+                plugin = nvim-autopairs;
                 config = toLuaFile ./lua/autopairs.lua;
             }
             {
