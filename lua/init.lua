@@ -22,7 +22,6 @@ opt.smartcase = true
 opt.mouse = "a"
 
 -- Spell Correction
-
 vim.o.spell = true
 vim.o.spelllang = "en,de"
 

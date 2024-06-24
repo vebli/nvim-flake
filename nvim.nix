@@ -69,7 +69,10 @@
             luasnip 
             friendly-snippets
             trouble-nvim
-
+            {
+                plugin = nvim-web-devicons;
+                config = toLua "require 'nvim-web-devicons'.setup()";
+            }
             {
                 plugin = lualine-nvim;
                 config = toLuaFile ./lua/lualine.lua; 

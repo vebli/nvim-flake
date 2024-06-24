@@ -1,6 +1,0 @@
-{fetchFromGitHub,...}:
-{
-    src = fetchFromGitHub {
-        
-    }
-}
