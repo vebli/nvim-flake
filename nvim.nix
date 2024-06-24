@@ -33,6 +33,7 @@
                 plugin = nvim-autopairs;
                 config = toLuaFile ./lua/autopairs.lua;
             }
+	    nvim-ts-autotag
             {
                 plugin = nvim-comment;
                 config = toLua "require(\"Comment\").setup()";
