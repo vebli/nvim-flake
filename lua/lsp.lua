@@ -23,7 +23,7 @@ cmp.setup({
         { name = 'luasnip' }, 
         { name = 'buffer' },
         { name = 'otter' },
-        { name = 'vim-dadbod-completions'},
+        { name = 'vim-dadbod-completion'},
     }),
 })
 -- Set configuration for specific filetype.
