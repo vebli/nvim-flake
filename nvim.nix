@@ -6,7 +6,7 @@
         toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n;";
         treesitter-parsers = with pkgs.vimPlugins.nvim-treesitter-parsers;[
             c cpp go zig rust python nix php lua
-            vue javascript typescript css html
+            vue javascript typescript css html sql
             json yaml toml
             latex bibtex
         ];
