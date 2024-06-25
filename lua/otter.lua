@@ -26,9 +26,3 @@ otter.setup{
   handle_leading_whitespace = true,
 }
 
-local cmp = require'cmp'
-cmp.setup({
-    sources = {
-        { name = "otter" },
-    },
-})

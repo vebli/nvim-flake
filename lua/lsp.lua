@@ -22,6 +22,8 @@ cmp.setup({
         { name = 'nvim_lsp' },
         { name = 'luasnip' }, 
         { name = 'buffer' },
+        { name = 'otter' },
+        { name = 'vim-dadbod-completions'},
     }),
 })
 -- Set configuration for specific filetype.
