@@ -112,7 +112,9 @@
                 plugin = nvim-dap-ui;
                 config = toLuaFile ./lua/dap-ui.lua;
             }
-	    
+            vim-dadbod
+            vim-dadbod-completion
+            vim-dadbod-ui
 
         ] ++ treesitter-parsers;
 
