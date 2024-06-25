@@ -1,4 +1,4 @@
-{config, pkgs, pkgs-unstable, lib, ... }:
+{ pkgs, pkgs-unstable, lib, ... }:
 {
     programs.neovim = 
     let 
@@ -59,16 +59,20 @@
                 config = toLuaFile ./lua/treesitter-textobjects.lua;
             }
             nvim-treesitter.withAllGrammars
-            oxocarbon-nvim
-            dracula-nvim
             nvim-lspconfig
             nvim-cmp
-            cmp-nvim-lsp
-
-            cmp_luasnip
             luasnip 
-            friendly-snippets
+            cmp_luasnip
+            cmp-nvim-lsp
             trouble-nvim
+            {
+                plugin = otter-nvim;
+                config = toLuaFile ./lua/otter.lua;
+            }
+
+            oxocarbon-nvim
+            dracula-nvim
+
             {
                 plugin = nvim-web-devicons;
                 config = toLua "require 'nvim-web-devicons'.setup()";
