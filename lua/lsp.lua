@@ -53,7 +53,7 @@ local servers = {
     'gopls',
     'nil_ls',
     'html',
-    'vuels',
+    'volar',
     'biome',
     'tsserver',
     'cssls',
