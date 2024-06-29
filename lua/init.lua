@@ -23,7 +23,6 @@ opt.mouse = "a"
 
 -- Spell Correction
 vim.o.spell = true
-vim.o.spellfile = "../spell"
 vim.o.spelllang = "en,de"
 
 -- Numbers

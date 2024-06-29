@@ -149,4 +149,9 @@
         ];
 
     };
+    home.file."nvim-spellfiles" = {
+        source = ./spell;
+        target = ".config/nvim/spell";
+        recursive = true;
+    }
 }
