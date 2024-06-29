@@ -118,7 +118,11 @@
             vim-dadbod-completion
             vim-dadbod-ui
 
-            tmux-nvim
+            {
+                plugin = tmux-nvim;
+                config = toLua "require(\"tmux\").setup()";
+
+            }
         ] ++ treesitter-parsers;
 
         extraPackages = with pkgs; [
