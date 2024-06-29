@@ -136,7 +136,7 @@
             biome
             tailwindcss-language-server
             nodePackages_latest.typescript-language-server
-            nodePackages_latest.vls
+            nodePackages_latest.volar
             docker-compose-language-service
             arduino-language-server
             python311Packages.python-lsp-server
