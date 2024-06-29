@@ -153,5 +153,5 @@
         source = ./spell;
         target = ".config/nvim/spell";
         recursive = true;
-    }
+    };
 }
