@@ -120,7 +120,7 @@
 
             {
                 plugin = tmux-nvim;
-                config = toLua "require(\"tmux\").setup()";
+                config = toLuaFile ./lua/tmux-nvim.lua;
 
             }
         ] ++ treesitter-parsers;
