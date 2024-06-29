@@ -57,7 +57,6 @@ local servers = {
     'tsserver',
     'cssls',
     'tailwindcss',
-    'volar',
     'cmake',
     'docker_compose_language_service',
     'dockerls',
@@ -84,4 +83,10 @@ lspconfig.clangd.setup {
 lspconfig.sqls.setup {
     capabilities = capabilities,
     root_dir = function() return vim.fn.getcwd() end,
+} 
+
+lspconfig.volar.setup {
+
+filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' }
+
 }
