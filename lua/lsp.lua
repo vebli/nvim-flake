@@ -91,7 +91,7 @@ require'lspconfig'.tsserver.setup{
     plugins = {
       {
         name = "@vue/typescript-plugin",
-        location = vim.lsp.buf.list_workspace_folders() .."/node_modules/@vue/typescript-plugin",
+        location = util.find_node_modules_ancestor() .."/node_modules/@vue/typescript-plugin",
         languages = {"javascript", "typescript", "vue"},
       },
     },
