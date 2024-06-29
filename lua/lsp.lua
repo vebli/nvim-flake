@@ -53,6 +53,7 @@ local servers = {
     'gopls',
     'nil_ls',
     'html',
+    'vuels',
     'biome',
     'tsserver',
     'cssls',
@@ -85,8 +86,3 @@ lspconfig.sqls.setup {
     root_dir = function() return vim.fn.getcwd() end,
 } 
 
-lspconfig.volar.setup {
-
-filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' }
-
-}
