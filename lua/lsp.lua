@@ -86,13 +86,12 @@ lspconfig.sqls.setup {
     root_dir = function() return vim.fn.getcwd() end,
 } 
 
-local nvim_lsp = require('lspconfig')
-
-nvim_lsp.tsserver.setup{
+require'lspconfig'.tsserver.setup{
   init_options = {
     plugins = {
       {
         name = "@vue/typescript-plugin",
+        location = vim.lsp.buf.list_workspace_folders() .."/node_modules/@vue/typescript-plugin",
         languages = {"javascript", "typescript", "vue"},
       },
     },
@@ -102,11 +101,4 @@ nvim_lsp.tsserver.setup{
     "typescript",
     "vue",
   },
-  on_new_config = function(new_config, new_root_dir)
-    for _, plugin in ipairs(new_config.init_options.plugins) do
-      if plugin.name == "@vue/typescript-plugin" then
-        plugin.location = new_root_dir .. "/node_modules/@vue/typescript-plugin"
-      end
-    end
-  end,
 }
