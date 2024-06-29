@@ -86,12 +86,15 @@ lspconfig.sqls.setup {
     root_dir = function() return vim.fn.getcwd() end,
 } 
 
+local current_buf = vim.api.nvim_get_current_buf() -- Get the current buffer handle
+local file_path = vim.api.nvim_buf_get_name(current_buf) -- Get the file path of the current buffer
+
 require'lspconfig'.tsserver.setup{
   init_options = {
     plugins = {
       {
         name = "@vue/typescript-plugin",
-        location = lspconfig.util.find_node_modules_ancestor() .."/node_modules/@vue/typescript-plugin",
+        location = lspconfig.util.find_node_modules_ancestor(file_path) .."/node_modules/@vue/typescript-plugin",
         languages = {"javascript", "typescript", "vue"},
       },
     },
