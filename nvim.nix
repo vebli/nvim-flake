@@ -140,8 +140,8 @@
             biome
             tailwindcss-language-server
             nodePackages_latest.typescript-language-server
-            nodePackages_latest.volar
-            vue-language-server
+            # nodePackages_latest.volar
+            vscode-extensions.vue.volar
             docker-compose-language-service
             arduino-language-server
             python311Packages.python-lsp-server
