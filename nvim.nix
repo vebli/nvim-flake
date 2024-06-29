@@ -58,6 +58,7 @@
                 plugin = nvim-treesitter-textobjects;
                 config = toLuaFile ./lua/treesitter-textobjects.lua;
             }
+
             nvim-treesitter.withAllGrammars
             nvim-lspconfig
             nvim-cmp
@@ -65,6 +66,7 @@
             cmp_luasnip
             cmp-nvim-lsp
             trouble-nvim
+
             {
                 plugin = otter-nvim;
                 config = toLuaFile ./lua/otter.lua;
@@ -116,6 +118,7 @@
             vim-dadbod-completion
             vim-dadbod-ui
 
+            tmux-nvim
         ] ++ treesitter-parsers;
 
         extraPackages = with pkgs; [
