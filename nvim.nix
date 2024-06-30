@@ -10,6 +10,7 @@
             json yaml toml
             latex bibtex
         ];
+        lspconfig = import ./lua/lsp.nix {inherit pkgs;};
     in
     {
         enable = true;
@@ -24,7 +25,7 @@
             vim.api.nvim_set_hl(0, "NormalFloats", {bg = "none" })
             ${builtins.readFile ./lua/init.lua}
             ${builtins.readFile ./lua/keymaps.lua}
-            ${builtins.readFile ./lua/lsp.lua}
+            ${lspconfig.luaScript}
         '';
 
         plugins = with pkgs.vimPlugins; [
