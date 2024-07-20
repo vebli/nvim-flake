@@ -67,6 +67,7 @@
             cmp_luasnip
             cmp-nvim-lsp
             trouble-nvim
+            vim-suda
 
             {
                 plugin = otter-nvim;
