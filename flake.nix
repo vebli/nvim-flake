@@ -13,6 +13,7 @@
         pkgs = import nixpkgs {inherit system overlays;};
     in 
     {
+	inherit overlays;
         packages.${system}.default = pkgs.neovim;
         apps.${system}.default = {
             type = "app";
