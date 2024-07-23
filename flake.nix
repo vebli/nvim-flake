@@ -1,10 +1,23 @@
 {
-    description = "Neovim Configuration";
-    inputs = { };
-    outputs = {self, nixpkgs, ...}: {
-        homeManagerModule = {config, pkgs, pkgs-unstable, lib, ...}:{
-            imports = [ (import ./nvim.nix {inherit config pkgs pkgs-unstable lib;}) ];
-        };
+    description = "A very basic flake";
+
+    inputs = {
+        nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     };
 
+
+    outputs = { self, nixpkgs }: 
+    let 
+        system = "x86_64-linux";
+        overlays = [(import ./nix/overlays.nix)];
+        pkgs = import nixpkgs {inherit system overlays;};
+    in 
+    {
+        packages.${system}.default = pkgs.neovim;
+        apps.${system}.default = {
+            type = "app";
+            program = "${pkgs.neovim}/bin/nvim";
+        };
+
+    };
 }
