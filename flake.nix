@@ -19,7 +19,11 @@
           ];
         };
     in {
-    overlays.default = final: prev: { neovim = self.packages.default; };
+    #overlay = final: prev: { neovim = self.packages.default; };
+    overlay = eachSystem (system: 
+	    (final: prev: { 
+		    neovim = self.packages.${system}.default;
+	    }));
     packages = eachSystem (system: 
         let pkgs = mkPkgs system;
         in {
