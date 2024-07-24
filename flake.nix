@@ -30,5 +30,8 @@
                 '';
             };
         });
+    overlays = final: prev: {
+    	{ neovim = self.packages.default; }	
+    };
     };
 }
