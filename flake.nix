@@ -19,6 +19,7 @@
           ];
         };
     in {
+    overlays.default = final: prev: { neovim = self.packages.default; };
     packages = eachSystem (system: 
         let pkgs = mkPkgs system;
         in {
@@ -30,6 +31,5 @@
                 '';
             };
         });
-    overlays = final: prev: { neovim = self.packages; };
     };
 }
