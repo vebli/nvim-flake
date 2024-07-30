@@ -1,7 +1,7 @@
 {pkgs, ...}:
 let
 tsserver_lib_path = pkgs.nodePackages_latest.typescript-language-server.outPath + "/lib/node_modules/typescript/lib";
-luaScript = ''
+luaScript = '' 
             local cmp = require('cmp')
                 local capabilities = require('cmp_nvim_lsp').default_capabilities()
                 local lspconfig = require('lspconfig')

@@ -15,15 +15,11 @@
           config = { allowUnfree = true; };
           inherit system;
           overlays = [
-            (import ./nix/overlays.nix)
+            (super: self: (import ./nix/overlays.nix {pkgs = self;}))
+            (super: self: (import ./nix/nvim.nix {pkgs = self;}))
           ];
         };
     in {
-    #overlay = final: prev: { neovim = self.packages.default; };
-    overlay = eachSystem (system: 
-	    (final: prev: { 
-		    neovim = self.packages.${system}.default;
-	    }));
     packages = eachSystem (system: 
         let pkgs = mkPkgs system;
         in {
