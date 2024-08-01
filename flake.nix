@@ -20,6 +20,10 @@
           ];
         };
     in {
+
+    overlay = (super: self: {
+        nvim-custom = self.packages.default;
+    });
     packages = eachSystem (system: 
         let pkgs = mkPkgs system;
         in {
