@@ -1,15 +1,16 @@
-{pkgs}: with pkgs; [
+{pkgs, pkgs-unstable, ...}: with pkgs-unstable; [
 
     fzf
     # LSP
     cmake-language-server
     arduino-language-server
     nodePackages_latest.vls
-    nodePackages_latest.volar
     tailwindcss-language-server
     nodePackages_latest.typescript-language-server
     sqls
     nil
     vscode-extensions.rust-lang.rust-analyzer
     lua-language-server
-]
+] ++ (with pkgs; [
+    nodePackages_latest.volar
+])
