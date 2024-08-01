@@ -3,6 +3,7 @@ local g = vim.g
 
 vim.api.nvim_set_hl(0, "Normal", {bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloats", {bg = "none" })
+-- vim.api.nvim_set_hl(0, 'Pmenu', { bg = "none"})
 
 opt.laststatus = 3 -- global statusline
 opt.showmode = false
