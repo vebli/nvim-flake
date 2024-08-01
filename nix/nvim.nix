@@ -62,6 +62,7 @@ in
                 vim-dadbod-ui
                 tmux-nvim
                 ouroboros-nvim
+                alpha-nvim
             ]; 
         };
     };

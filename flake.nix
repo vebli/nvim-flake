@@ -38,11 +38,11 @@
             pkgs = mkPkgs system;
             pkgs-unstable = mkPkgsUnstable system;
         in {
-            default = pkgs.writeShellApplication {
+            default = pkgs-unstable.writeShellApplication {
                 name = "nvim";
                 runtimeInputs = import ./nix/runtime.nix { inherit pkgs pkgs-unstable; };
                 text = ''
-                    ${pkgs.neovim}/bin/nvim "$@"
+                    ${pkgs-unstable.neovim}/bin/nvim "$@"
                 '';
             };
         });
