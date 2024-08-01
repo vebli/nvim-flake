@@ -21,9 +21,6 @@
         };
     in {
 
-    overlay = (super: self: {
-        nvim-custom = self.packages."${builtins.currentSystem}".default;
-    });
     packages = eachSystem (system: 
         let pkgs = mkPkgs system;
         in {
@@ -36,4 +33,7 @@
             };
         });
     };
+    overlay = (super: self: {
+        nvim-custom = self.packages."${builtins.currentSystem}".default;
+    });
 }
