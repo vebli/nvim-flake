@@ -1,7 +1,7 @@
 {pkgs, ...}:
 let
 tsserver_lib_path = pkgs.nodePackages_latest.typescript-language-server.outPath + "/lib/node_modules/typescript/lib";
-luaScript = '' 
+luaScript = /*lua*/'' 
             local cmp = require('cmp')
                 local capabilities = require('cmp_nvim_lsp').default_capabilities()
                 local lspconfig = require('lspconfig')
@@ -25,7 +25,6 @@ luaScript = ''
                         sources = cmp.config.sources({
                                 { name = 'nvim_lsp' },
                                 { name = 'luasnip' },
-                                { name = 'otter' },
                                 { name = 'vim-dadbod-completion'},
                                 }, {
                                 { name = 'buffer' },
@@ -57,7 +56,7 @@ luaScript = ''
                     'gopls',
                     'nil_ls',
                     'html',
-		    'tsserver',
+                    'tsserver',
                     'biome',
                     'cssls',
                     'tailwindcss',

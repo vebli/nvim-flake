@@ -39,3 +39,8 @@ nmap('<leader>ds', ':lua require("dap").step_over()<CR>')
 
 -- Oil
 nmap('-', '<CMD>Oil<CR>')
+-- LSP
+nmap('K', '<cmd>lua vim.lsp.buf.hover()<CR>')
+-- nmap('<leader>', '<cmd>lua require'otter'.activate()<CR>')
+
+
