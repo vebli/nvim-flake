@@ -11,6 +11,7 @@
     nil
     vscode-extensions.rust-lang.rust-analyzer
     lua-language-server
+    python312Packages.python-lsp-server
 ] ++ (with pkgs; [
     nodePackages_latest.volar
 ])
