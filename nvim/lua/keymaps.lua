@@ -26,9 +26,6 @@ nmap('<leader>rn', ':lua vim.lsp.buf.rename()<cr>')
 --- Ouroboros ---
 nmap('fc', ':Ouroboros<CR>')
 
---- Trouble ---
-nmap('<leader>tt', ':TroubleToggle<CR>')
-
 --- CMake Tools ---
 nmap('<leader>cm', ':CMakeRun<CR>')
 --- DAP (Debugger) ---
@@ -44,5 +41,5 @@ nmap('K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 
 -- Trouble 
 nmap('<leader>tt', ':Trouble diagnostics toggle pinned=true win.relative=win win.position=bottom<CR>')
-nmap('<leader>ts', ':Trouble diagnostics toggle pinned=true win.relative=win win.position=right<CR>')
+nmap('<leader>ts', ':Trouble symbols toggle pinned=true win.relative=win win.position=right<CR>')
 
