@@ -6,6 +6,7 @@
     arduino-language-server
     nodePackages_latest.vls
     tailwindcss-language-server
+    vscode-langservers-extracted
     nodePackages_latest.typescript-language-server
     sqls
     nil
