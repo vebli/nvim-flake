@@ -14,3 +14,5 @@ require("plugin_config.ouroboros")
 require("plugin_config.alpha")
 require("plugin_config.oil")
 require("plugin_config.trouble")
+require("plugin_config.overseer")
+

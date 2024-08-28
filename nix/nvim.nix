@@ -63,6 +63,7 @@ in
                 tmux-nvim
                 ouroboros-nvim
                 alpha-nvim
+                overseer-nvim
             ]; 
         };
     };
