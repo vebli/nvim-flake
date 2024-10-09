@@ -21,8 +21,6 @@ in
             ${lspconfig.luaScript}
             vim.cmd[[colorscheme dracula]]
             vim.opt.rtp:prepend('${nvimRtp}/nvim')
-            vim.opt.rtp:prepend('${nvimRtp}/nvim/lua')
-            vim.opt.rtp:prepend('${nvimRtp}/nvim/lua/plugin_config')
             '' + (builtins.readFile "${nvimRtp}/nvim/init.lua") + ''  
             EOF
             '';
