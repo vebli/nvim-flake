@@ -62,6 +62,7 @@ in
                 ouroboros-nvim
                 alpha-nvim
                 overseer-nvim
+                godbolt-nvim
             ]; 
         };
     };

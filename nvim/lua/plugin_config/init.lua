@@ -1,4 +1,5 @@
 require("plugin_config.autopairs")
+require("plugin_config.godbolt")
 require("plugin_config.cmake-tools")
 require("plugin_config.dap-ui")
 require("plugin_config.dap")
