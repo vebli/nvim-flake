@@ -62,22 +62,35 @@ luaScript = /*lua*/''
                 }
             end
 
-                lspconfig.clangd.setup {
-                    capabilities = capabilities,
-                                 cmd = { 'clangd', '--compile-commands-dir=build'},
-                                 filetypes = { 'c', 'cpp' },
-                                 root_dir = function() return vim.fn.getcwd() end,
-                                 on_attach = function(client, bufnr)
-                                     -- Set compiler flags
-                                     vim.api.nvim_buf_set_option(bufnr, 'makeprg', 'clang\\ -Wall\\ -Wextra\\ -O3\\ %')
-                                     vim.api.nvim_buf_set_option(bufnr, 'errorformat', '%f:%l:%c:\\ %tarning:\\ %m,%f:%l:%c:\\ %trror:\\ %m')
-                                     end,
-                }
+            lspconfig.clangd.setup {
+                capabilities = capabilities,
+                             cmd = { 'clangd', '--compile-commands-dir=build'},
+                             filetypes = { 'c', 'cpp' },
+                             root_dir = function() return vim.fn.getcwd() end,
+                             on_attach = function(client, bufnr)
+                                 -- Set compiler flags
+                                 vim.api.nvim_buf_set_option(bufnr, 'makeprg', 'clang\\ -Wall\\ -Wextra\\ -O3\\ %')
+                                 vim.api.nvim_buf_set_option(bufnr, 'errorformat', '%f:%l:%c:\\ %tarning:\\ %m,%f:%l:%c:\\ %trror:\\ %m')
+                                 end,
+            }
             lspconfig.sqls.setup {
                 capabilities = capabilities,
                              root_dir = function() return vim.fn.getcwd() end,
             } 
-            require'lspconfig'.volar.setup{
+            lspconfig.nixd.setup {
+                cmd = {"nixd"},
+                settings = {
+                    nixd = {
+                        nixpkgs = {
+                            expr = "import <nixpkgs> { }",
+                        },
+                        formatting = {
+                            command = {"alejandra"},
+                        },
+                    },
+                },
+            }
+            lspconfig.volar.setup{
                 init_options = {
                     typescript = {
                         tsdk = "${tsserver_lib_path}"
