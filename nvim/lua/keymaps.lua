@@ -38,7 +38,7 @@ nmap('<leader>ds', ':lua require("dap").step_over()<CR>')
 nmap('-', '<CMD>Oil<CR>')
 -- LSP
 nmap('K', '<cmd>lua vim.lsp.buf.hover()<CR>')
-
+nmap("<leader>fm", "<cmd>lua vim.lsp.buf.format()<CR>")
 -- Trouble 
 nmap('<leader>tt', ':Trouble diagnostics toggle pinned=true win.relative=win win.position=bottom<CR>')
 nmap('<leader>ts', ':Trouble symbols toggle pinned=true win.relative=win win.position=right<CR>')

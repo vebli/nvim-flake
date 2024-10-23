@@ -1,8 +1,8 @@
 local opt = vim.opt
 local g = vim.g
 
-vim.api.nvim_set_hl(0, "Normal", {bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloats", {bg = "none" })
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloats", { bg = "none" })
 -- vim.api.nvim_set_hl(0, 'Pmenu', { bg = "none"})
 
 opt.laststatus = 3 -- global statusline
@@ -65,6 +65,5 @@ g.mapleader = " "
 
 -- disable some default providers
 for _, provider in ipairs { "node", "perl", "python3", "ruby" } do
-  vim.g["loaded_" .. provider .. "_provider"] = 0
+    vim.g["loaded_" .. provider .. "_provider"] = 0
 end
-
