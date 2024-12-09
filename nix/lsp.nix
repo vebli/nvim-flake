@@ -58,6 +58,7 @@
               'dockerls',
               'rust_analyzer',
               'arduino_language_server',
+              'asm_lsp'
           }
       for _, server in ipairs(servers) do
           lspconfig[server].setup {

@@ -2,6 +2,7 @@
     curl #for godbolt
     fzf
     # LSP
+    asm-lsp
     cmake-language-server
     arduino-language-server
     nodePackages_latest.vls
