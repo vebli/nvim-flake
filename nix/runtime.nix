@@ -19,5 +19,5 @@
     # Formatter
     alejandra
 ] ++ (with pkgs; [
-    nodePackages_latest.volar
+    vscode-extensions.vue.volar
 ])
