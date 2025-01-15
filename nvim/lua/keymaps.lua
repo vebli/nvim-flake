@@ -13,14 +13,12 @@ nmap('<leader>nh', ':noh<CR>')
 --- Telescope ---
 nmap('<leader>ff', ':Telescope find_files<CR>')
 nmap('<leader>fg', ':Telescope git_files<CR>')
-nmap('<leader>fb', ':Telescope buffers<CR>')
+nmap('<leader>bm', ':Telescope buffers<CR>')
 nmap('<leader>qf', ':Telescope quickfix<CR>')
 
---- Buffer Manager ---
-nmap('bm', ':lua require("buffer_manager.ui").toggle_quick_menu()<CR>')
 
 --- mason ---
-nmap('gd' ,':lua vim.lsp.buf.definitions()<cr>')
+nmap('gd' ,':lua vim.lsp.buf.definition()<cr>')
 nmap('<leader>rn', ':lua vim.lsp.buf.rename()<cr>')
 
 --- Ouroboros ---
@@ -33,6 +31,10 @@ nmap('<leader>di', ':CMakeDebug<CR>')
 nmap('<leader>db', ':lua require("dap").toggle_breakpoint()<CR>')
 nmap('<leader>dc', ':lua require("dap").continue()<CR>')
 nmap('<leader>ds', ':lua require("dap").step_over()<CR>')
+
+--- DB ---
+nmap('<leader>dad', ':DBUIToggle<CR>')
+
 
 -- Oil
 nmap('-', '<CMD>Oil<CR>')
