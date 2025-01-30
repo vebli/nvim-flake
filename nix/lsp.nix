@@ -1,5 +1,4 @@
 {pkgs, ...}: let
-  tsserver_lib_path = pkgs.nodePackages_latest.typescript-language-server.outPath + "/lib/node_modules/typescript/lib";
   luaScript =
     /*
     lua
@@ -49,7 +48,6 @@
               'gopls',
               'nil_ls',
               'html',
-              'tsserver',
               'biome',
               'cssls',
               'tailwindcss',
@@ -58,7 +56,8 @@
               'dockerls',
               'rust_analyzer',
               'arduino_language_server',
-              'asm_lsp'
+              'asm_lsp',
+              'ols'
           }
       for _, server in ipairs(servers) do
           lspconfig[server].setup {
@@ -93,15 +92,6 @@
                   },
               },
           },
-      }
-      lspconfig.volar.setup{
-          init_options = {
-              typescript = {
-                  tsdk = "${tsserver_lib_path}"
-                      -- Alternative location if installed as root:
-                      -- tsdk = '/usr/local/lib/node_modules/typescript/lib'
-              }
-          }
       }
     '';
 in {

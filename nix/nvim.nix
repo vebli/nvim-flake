@@ -59,7 +59,7 @@ in
                 vim-dadbod-completion
                 vim-dadbod-ui
                 tmux-nvim
-                ouroboros-nvim
+                # ouroboros-nvim
                 alpha-nvim
                 overseer-nvim
                 godbolt-nvim

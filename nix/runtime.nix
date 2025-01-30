@@ -5,7 +5,7 @@
     asm-lsp
     cmake-language-server
     arduino-language-server
-    nodePackages_latest.vls
+    vscode-extensions.vue.volar
     tailwindcss-language-server
     vscode-langservers-extracted
     nodePackages_latest.typescript-language-server
@@ -15,6 +15,7 @@
     vscode-extensions.rust-lang.rust-analyzer
     lua-language-server
     python312Packages.python-lsp-server
+    ols
 
     # Formatter
     alejandra
