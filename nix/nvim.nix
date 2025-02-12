@@ -19,7 +19,7 @@ in
             customRC = ''
             lua << EOF
             ${lspconfig.luaScript}
-            vim.cmd[[colorscheme dracula]]
+            vim.cmd[[colorscheme rose-pine]]
             vim.opt.rtp:prepend('${nvimRtp}/nvim')
             '' + (builtins.readFile "${nvimRtp}/nvim/init.lua") + ''  
             EOF
@@ -46,6 +46,7 @@ in
                 otter-nvim
                 oxocarbon-nvim
                 dracula-nvim
+                rose-pine
                 nvim-web-devicons
                 lualine-nvim
                 nvim-highlight-colors
