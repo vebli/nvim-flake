@@ -1,22 +1,20 @@
 local opt = vim.opt
 local g = vim.g
 
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloats", { bg = "none" })
--- vim.api.nvim_set_hl(0, 'Pmenu', { bg = "none"})
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "NormalFloats", { bg = "none" })
 
 opt.laststatus = 3 -- global statusline
 opt.showmode = false
 
 opt.clipboard = "unnamedplus"
 opt.cursorline = true
-
 -- Indenting
 opt.expandtab = true
-opt.shiftwidth = 4
+opt.shiftwidth = 2
 opt.smartindent = true
-opt.tabstop = 4
-opt.softtabstop = 4
+opt.tabstop = 2
+opt.softtabstop = 2
 vim.cmd('filetype plugin indent on')
 vim.o.autoindent = true
 

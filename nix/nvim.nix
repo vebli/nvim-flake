@@ -59,10 +59,11 @@ in
                 vim-dadbod-completion
                 vim-dadbod-ui
                 tmux-nvim
-                # ouroboros-nvim
+                lsp_signature-nvim
                 alpha-nvim
                 overseer-nvim
                 godbolt-nvim
+                toggleterm-nvim
             ]; 
         };
     };
